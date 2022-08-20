@@ -1,0 +1,11 @@
+<div *ngFor="let item of universitiListItems">
+  <div class="d-felx justify-content-between">
+    <b>{{item.name}}</b>
+    <small class="text_muted">({{item.country}})</small>
+  </div>
+
+  <p *ngIf="item.web_pages?.length > 0">
+    <a *ngFor="let address of item.web_pages" [href]="address"><small> {{address}}</small></a>
+  </p>
+  <hr>
+</div>
